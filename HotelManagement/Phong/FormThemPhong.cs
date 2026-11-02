@@ -15,9 +15,41 @@ namespace HotelManagement.Phong
             CancelButton = btnThoat;
         }
 
+        private string GenerateMaPhong()
+        {
+            using var db = new HotelManagementContext();
+            var danhSachMa = db.Phongs
+                .AsNoTracking()
+                .Select(p => p.MaPh)
+                .ToList();
+
+            int max = 0;
+            foreach (string ma in danhSachMa)
+            {
+                if (ma != null && ma.StartsWith("P", StringComparison.OrdinalIgnoreCase))
+                {
+                    string phanSo = ma.Substring(1);
+                    if (int.TryParse(phanSo, out int so) && so > max)
+                    {
+                        max = so;
+                    }
+                }
+            }
+            if (max == 0) return "P101";
+            return "P" + (max + 1).ToString();
+        }
+
         private void FormThemPhong_Load(object sender, EventArgs e)
         {
             txtMaPhong.MaxLength = 5;
+            txtMaPhong.ReadOnly = true;
+            try
+            {
+                txtMaPhong.Text = GenerateMaPhong();
+            }
+            catch
+            {
+            }
             txtGhiChu.MaxLength = 100;
             cbTrangThaiPhong.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTinhTrangDonDep.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -57,10 +89,8 @@ namespace HotelManagement.Phong
 
             if (maPH.Length == 0)
             {
-                MessageBox.Show("Vui lòng nhập mã phòng.", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtMaPhong.Focus();
-                return;
+                maPH = GenerateMaPhong();
+                txtMaPhong.Text = maPH;
             }
 
             if (string.IsNullOrEmpty(maLPH))

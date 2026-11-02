@@ -166,7 +166,7 @@ namespace HotelManagement.Phong
             try
             {
                 using var db = new HotelManagementContext();
-                var phong = db.Phongs.FirstOrDefault(p => p.MaPh == maPhong && p.DaXoa != true);
+                var phong = db.Phongs.FirstOrDefault(p => p.MaPh == maPhong);
                 if (phong == null)
                 {
                     MessageBox.Show("Không tìm thấy phòng để xóa.", "Lỗi",
@@ -181,7 +181,20 @@ namespace HotelManagement.Phong
                     return;
                 }
 
-                phong.DaXoa = true;
+                var cacCtdp = db.Ctdps
+                    .Include(c => c.HoaDons)
+                    .Include(c => c.Ctdvs)
+                    .Where(c => c.MaPh == maPhong)
+                    .ToList();
+
+                foreach (var ctdp in cacCtdp)
+                {
+                    db.HoaDons.RemoveRange(ctdp.HoaDons);
+                    db.Ctdvs.RemoveRange(ctdp.Ctdvs);
+                }
+                db.Ctdps.RemoveRange(cacCtdp);
+
+                db.Phongs.Remove(phong);
                 db.SaveChanges();
                 MessageBox.Show("Đã xóa phòng thành công!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

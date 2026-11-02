@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sangn\\Downloads\\c#\\HotelManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{31342FC5-1A12-4C45-BD95-BFB244E707E7}|HotelManagement\\HotelManagement.csproj|c:\\users\\sangn\\downloads\\c#\\hotelmanagement\\hotelmanagement\\models\\loaiphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31342FC5-1A12-4C45-BD95-BFB244E707E7}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\models\\loaiphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{630C234E-BEBC-D068-CAAF-13C6F768816A}|HotelManagement\\HotelManagement.csproj|c:\\users\\sangn\\downloads\\c#\\hotelmanagement\\hotelmanagement\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{630C234E-BEBC-D068-CAAF-13C6F768816A}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31342FC5-1A12-4C45-BD95-BFB244E707E7}|HotelManagement\\HotelManagement.csproj|c:\\users\\sangn\\downloads\\c#\\hotelmanagement\\hotelmanagement\\models\\hotelmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31342FC5-1A12-4C45-BD95-BFB244E707E7}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\models\\hotelmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{630C234E-BEBC-D068-CAAF-13C6F768816A}|HotelManagement\\HotelManagement.csproj|c:\\users\\sangn\\downloads\\c#\\hotelmanagement\\hotelmanagement\\models\\loaiphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630C234E-BEBC-D068-CAAF-13C6F768816A}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\models\\loaiphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31342FC5-1A12-4C45-BD95-BFB244E707E7}|HotelManagement\\HotelManagement.csproj|c:\\users\\sangn\\downloads\\c#\\hotelmanagement\\hotelmanagement\\models\\hotelmanagementcontext.custom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31342FC5-1A12-4C45-BD95-BFB244E707E7}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\models\\hotelmanagementcontext.custom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{630C234E-BEBC-D068-CAAF-13C6F768816A}|HotelManagement\\HotelManagement.csproj|c:\\users\\sangn\\downloads\\c#\\hotelmanagement\\hotelmanagement\\models\\hotelmanagementcontext.custom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630C234E-BEBC-D068-CAAF-13C6F768816A}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\models\\hotelmanagementcontext.custom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{630C234E-BEBC-D068-CAAF-13C6F768816A}|HotelManagement\\HotelManagement.csproj|c:\\users\\sangn\\downloads\\c#\\hotelmanagement\\hotelmanagement\\models\\hotelmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{630C234E-BEBC-D068-CAAF-13C6F768816A}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\models\\hotelmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,15 +43,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FormMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sangn\\Downloads\\c#\\HotelManagement\\HotelManagement\\FormMain.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\FormMain.cs",
+              "ToolTip": "C:\\Users\\sangn\\Downloads\\c#\\HotelManagement\\HotelManagement\\FormMain.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\FormMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T03:55:50.695Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LoaiPhong.cs",
               "DocumentMoniker": "C:\\Users\\sangn\\Downloads\\c#\\HotelManagement\\HotelManagement\\Models\\LoaiPhong.cs",
               "RelativeDocumentMoniker": "HotelManagement\\Models\\LoaiPhong.cs",
               "ToolTip": "C:\\Users\\sangn\\Downloads\\c#\\HotelManagement\\HotelManagement\\Models\\LoaiPhong.cs",
               "RelativeToolTip": "HotelManagement\\Models\\LoaiPhong.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T03:39:54.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-26T03:39:54.472Z"
             },
             {
               "$type": "Document",
@@ -59,12 +74,11 @@
               "RelativeToolTip": "HotelManagement\\Models\\Hotelmanagementcontext.custom.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T01:04:21.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-26T01:04:21.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HotelManagementContext.cs",
               "DocumentMoniker": "C:\\Users\\sangn\\Downloads\\c#\\HotelManagement\\HotelManagement\\Models\\HotelManagementContext.cs",
               "RelativeDocumentMoniker": "HotelManagement\\Models\\HotelManagementContext.cs",
@@ -72,8 +86,7 @@
               "RelativeToolTip": "HotelManagement\\Models\\HotelManagementContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T01:00:38.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-26T01:00:38.885Z"
             }
           ]
         },

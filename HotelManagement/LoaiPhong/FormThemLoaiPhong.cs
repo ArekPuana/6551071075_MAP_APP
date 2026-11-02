@@ -15,12 +15,44 @@ namespace HotelManagement.LoaiPhong
             CancelButton = btnThoat;
 
             txtMaLoaiPhong.MaxLength = 5;
+            txtMaLoaiPhong.ReadOnly = true;
+            try
+            {
+                txtMaLoaiPhong.Text = GenerateMaLoaiPhong();
+            }
+            catch
+            {
+            }
+
             txtTenLP.MaxLength = 20;
             txtSoGiuong.MaxLength = 2;
             txtSoNguoiToiDa.MaxLength = 2;
 
             txtSoGiuong.KeyPress += ChiChoNhapSo;
             txtSoNguoiToiDa.KeyPress += ChiChoNhapSo;
+        }
+
+        private string GenerateMaLoaiPhong()
+        {
+            using var db = new HotelManagementContext();
+            var danhSachMa = db.LoaiPhongs
+                .AsNoTracking()
+                .Select(l => l.MaLph)
+                .ToList();
+
+            int max = 0;
+            foreach (string ma in danhSachMa)
+            {
+                if (ma != null && ma.StartsWith("LP", StringComparison.OrdinalIgnoreCase))
+                {
+                    string phanSo = ma.Substring(2);
+                    if (int.TryParse(phanSo, out int so) && so > max)
+                    {
+                        max = so;
+                    }
+                }
+            }
+            return "LP" + (max + 1).ToString("D2");
         }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
@@ -30,10 +62,8 @@ namespace HotelManagement.LoaiPhong
 
             if (maLPH.Length == 0)
             {
-                MessageBox.Show("Vui lòng nhập mã loại phòng.", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtMaLoaiPhong.Focus();
-                return;
+                maLPH = GenerateMaLoaiPhong();
+                txtMaLoaiPhong.Text = maLPH;
             }
 
             if (tenLPH.Length == 0)
@@ -81,10 +111,8 @@ namespace HotelManagement.LoaiPhong
                 using var db = new HotelManagementContext();
                 if (db.LoaiPhongs.Any(l => l.MaLph == maLPH))
                 {
-                    MessageBox.Show("Mã loại phòng đã tồn tại. Vui lòng nhập mã khác.", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtMaLoaiPhong.Focus();
-                    return;
+                    maLPH = GenerateMaLoaiPhong();
+                    txtMaLoaiPhong.Text = maLPH;
                 }
 
                 db.LoaiPhongs.Add(new Models.LoaiPhong
