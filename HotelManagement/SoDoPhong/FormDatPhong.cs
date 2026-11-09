@@ -160,6 +160,7 @@ namespace HotelManagement.SoDoPhong
                     .Where(p => p.DaXoa != true
                         && p.Ttph == "Bình thường"
                         && !p.Ctdps.Any(c => c.DaXoa != true
+                            && (c.TrangThai == "Đã đặt" || c.TrangThai == "Đang thuê")
                             && c.CheckIn < checkOut
                             && c.CheckOut > checkIn))
                     .OrderBy(p => p.MaPh)
@@ -419,6 +420,7 @@ namespace HotelManagement.SoDoPhong
 
                     bool biTrung = db.Ctdps.Any(c => c.MaPh == maPH
                         && c.DaXoa != true
+                        && (c.TrangThai == "Đã đặt" || c.TrangThai == "Đang thuê")
                         && c.CheckIn < checkOut
                         && c.CheckOut > checkIn);
 

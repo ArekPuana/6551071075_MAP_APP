@@ -135,6 +135,7 @@ namespace HotelManagement.SoDoPhong
                     DateTime ngayChon = dtNgayChon.Value.Date;
                     query = query.Where(p => p.Ttph == "Bình thường"
                         && !p.Ctdps.Any(c => c.DaXoa != true
+                            && (c.TrangThai == "Đã đặt" || c.TrangThai == "Đang thuê")
                             && ngayChon >= c.CheckIn.Date
                             && ngayChon < c.CheckOut.Date));
                 }
